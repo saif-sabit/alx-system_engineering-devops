@@ -8,3 +8,4 @@ The seventh script adds execute permission to the owner and the group and read p
 The eighth script adds execute persmission for all sinece it is the same case like task 4 we use + to add permissions.
 The script no 9 sets permission for user and group no permission and all permissions for ither user since it is going to override we user numeric way.
 The script no 10 set the owner with all permissions and group with read and execute permission and for other users they have write and execute permission
+The script no 11 copy the permissions from file called oellh to file called hello
