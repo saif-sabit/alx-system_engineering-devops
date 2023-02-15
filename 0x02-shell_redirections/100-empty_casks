@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -alR | awk ' /26/ {print $9}'
+ls -alR | awk ' /0/ {print $9}'
