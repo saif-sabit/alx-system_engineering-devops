@@ -1,2 +1,3 @@
 #!/bin/bash
-echo -e $(bestchol\#($water\#$WATER+$stir\#$STIR))
+echo -e $(bestchol\#($water\#$WATER+$stir.\#$STIR))
+
