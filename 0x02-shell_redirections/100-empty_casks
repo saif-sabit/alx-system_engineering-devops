@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -alR | awk ' /0/ {print $9}'
+find . -empty -printf "%f /n"
