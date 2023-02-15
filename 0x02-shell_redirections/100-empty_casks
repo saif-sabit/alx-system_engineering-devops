@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -name "*.js" -type f -delete
+ls -alR | awk ' /26/ {print $9}'
