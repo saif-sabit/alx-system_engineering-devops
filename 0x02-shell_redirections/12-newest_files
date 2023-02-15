@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -t|sort|head
+ls -t | head -10
