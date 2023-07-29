@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#Infinity
+
+pid=$(pgrep -f "7-highlander")
+if [ "$pid" > "0" ]
+then
+kill -SIGKILL "$pid"
+fi
