@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 #Change hosts file
-cp /etc/hosts /etc/hosts.new
-echo "127.0.0.2 tlocalhost" > /etc/hosts.new
-echo "8.8.8.8 facebook.com" >> /etc/hosts.new
-cp -f /hosts.new /etc/hosts
+cp /etc/hosts /etc/hosts.bk
+echo "127.0.0.2 tlocalhost" > /etc/hosts
+echo "8.8.8.8 facebook.com" >> /etc/hosts
