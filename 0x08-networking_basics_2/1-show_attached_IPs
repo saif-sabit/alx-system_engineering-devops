@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #show ip
 ip=$(hostname -I)
-echo $ip
+echo "$ip"
