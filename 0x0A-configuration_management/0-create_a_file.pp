@@ -1,6 +1,6 @@
 # Create new file
 file{'/tmp/school':
-  ensure => /tmp/school
+  ensure => file,
   owner => 'www-data',
   group => 'www-data',
   privildge => '0744',
