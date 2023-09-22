@@ -6,5 +6,3 @@ file{'/tmp/school':
   privildge => '0744',
   content => 'I love Puppet'
 }
-
-}
