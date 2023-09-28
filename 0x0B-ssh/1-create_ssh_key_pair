@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
-ssh-keygen -b 4096 -N betty -f school
+dir=$(dirname "$0")
+private_key="school"
+bits=4096
+passphrase="betty"
+ssh-keygen -t rsa -b $bits -f "$dir/$private_key" -N "$passphrase"
+
 
