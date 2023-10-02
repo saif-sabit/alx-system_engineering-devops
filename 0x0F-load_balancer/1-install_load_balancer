@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# Install and configure HAProxy to handle requests for web-01 and web-02 servers
+sudo apt-get update
+sudo apt-get install -y haproxy
+
+# Backup file for the default configuration
+sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.bak
+sudo chown  $USER:$USER /etc/haproxy/haproxy.cfg
+
+# HAProxy configuration file
+echo "
+frontend load_balancer
+    bind *:80
+    mode http
+    default_backend web_servers
+
+backend web_servers
+    mode http
+    balance roundrobin
+    server 235134-web-01 54.172.179.45:80 check
+    server 235134-web-02 100.26.167.148:80 check" >> /etc/haproxy/haproxy.cfg
+
+# Check management via an init script
+sudo systemctl enable haproxy
+
+# Restart HAProxy
+sudo systemctl restart haproxy
