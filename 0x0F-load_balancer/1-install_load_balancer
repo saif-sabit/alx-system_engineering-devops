@@ -17,8 +17,8 @@ frontend load_balancer
 backend web_servers
     mode http
     balance roundrobin
-    server 235134-web-01 54.172.179.45:80 check
-    server 235134-web-02 100.26.167.148:80 check" >> /etc/haproxy/haproxy.cfg
+    server 235134-web-01 18.206.232.148:80 check
+    server 235134-web-02 54.90.18.160:80 check" >> /etc/haproxy/haproxy.cfg
 
 # Check management via an init script
 sudo systemctl enable haproxy
