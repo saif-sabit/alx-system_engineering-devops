@@ -2,7 +2,6 @@
   
   package { 'nginx':
     ensure  => installed,
-    require => package['apache2.2-common'],
   }
 
   file { '/var/www/html/nginx':
