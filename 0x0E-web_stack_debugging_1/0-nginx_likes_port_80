@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Write a Bash script that configures a server 
+cp -f /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
