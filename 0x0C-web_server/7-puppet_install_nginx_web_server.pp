@@ -1,7 +1,8 @@
   # puppet
   
   package { 'nginx':
-    ensure => installed,
+    ensure  => installed,
+    require => package['apache2.2-common'],
   }
 
   file { '/var/www/html/nginx':
