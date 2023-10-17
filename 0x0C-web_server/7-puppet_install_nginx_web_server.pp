@@ -36,4 +36,5 @@ class nginx_server {
     notify => Service['nginx'],
   }
 }
-
+#  includes the nginx_server class, ensuring that it gets applied.
+include nginx_server
