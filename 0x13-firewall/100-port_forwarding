@@ -1,3 +1,4 @@
+# open config file and add the forward section
 sudo nano /etc/ufw/before.rules
 *nat
 :PREROUTING ACCEPT [0:0]
