@@ -21,4 +21,4 @@ if __name__ == '__main__':
         with open('{}.csv'.format(id), 'w') as csvfile:
             for task in userTasks:
                 csvfile.write("{},{},{},{}\n".format(
-                           id, name, task.get('completed'), task.get('title')))
+                      str(id), name, task.get('completed'), task.get('title')))
