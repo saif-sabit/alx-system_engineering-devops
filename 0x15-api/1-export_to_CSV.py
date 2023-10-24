@@ -4,9 +4,9 @@ Write a Python script that, using this REST API,
  for a given employee ID
 , returns information about his/her TODO list progress
 '''
+import csv
 import requests
 import sys
-import csv
 if __name__ == '__main__':
     API = 'https://jsonplaceholder.typicode.com/users/'
     API2 = 'https://jsonplaceholder.typicode.com/todos/'
@@ -21,4 +21,4 @@ if __name__ == '__main__':
         with open('{}.csv'.format(id), 'w') as csvfile:
             for task in userTasks:
                 csvfile.write("{},{},{},{}\n".format(
-                           id, name, task.get('title'), task.get('completed')))
+                           id, name, task.get('completed'), task.get('title')))
