@@ -16,7 +16,7 @@ if __name__ == '__main__':
         r = requests.get(url).json()
         url2 = API2
         r2 = requests.get(url2).json()
-        name = r.get('name')
+        name = r.get('username')
         userTasks = list(filter(lambda x: x.get('userId') == id, r2))
         with open('{}.csv'.format(id), 'w') as csvfile:
             for task in userTasks:
