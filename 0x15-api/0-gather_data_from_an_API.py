@@ -21,7 +21,7 @@ if __name__ == '__main__':
         total = len(userTasks)
         completed = list(filter(lambda x: x.get(
                                               'completed') is True, userTasks))
-        print("Employee {0} is done with tasks({1}/{2}):".format(
+        print("Employee {} is done with tasks({}/{}):".format(
                                                   name, len(completed), total))
         for item in completed:
             print("\t {0}".format(item.get('title')))
