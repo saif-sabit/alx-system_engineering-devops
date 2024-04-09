@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+
 """
 Function that queries the Reddit API and returns the number of subscribers
 """
+
 import requests
 
 
@@ -10,6 +12,7 @@ def number_of_subscribers(subreddit):
     A function that queries the Reddit API and returns
     the number of subscribers
     """
+
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
     headers = {
         "user-Agent": "Tajba/API "
