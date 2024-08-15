@@ -13,12 +13,12 @@ def number_of_subscribers(subreddit):
     the number of subscribers
     """
 
-    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
+    url = f'https://www.reddit.com/r/{subreddit}/about.json'
     headers = {
-        "user-Agent": "Tajba/API "
+        "user-Agent": "tajba/0.0.1"
     }
     response = requests.get(url, headers=headers, allow_redirects=False)
     if response.status_code == 404:
         return 0
-    results = response.json().get("data")
-    return results.get("subscribers")
+    results = response.json()
+    return results['data']['subscribers']
